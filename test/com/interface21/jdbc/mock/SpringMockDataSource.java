@@ -6,6 +6,9 @@
 package com.interface21.jdbc.mock;
 
 import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
+import java.util.logging.Logger;
 
 import com.interface21.jdbc.datasource.SmartDataSource;
 import com.mockobjects.sql.MockDataSource;
@@ -34,4 +37,18 @@ public class SpringMockDataSource
 		return false;
 	}
 
+	@Override
+	public <T> T unwrap(Class<T> iface) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public boolean isWrapperFor(Class<?> iface) throws SQLException {
+		return false;
+	}
+
+	@Override
+	public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+		return null;
+	}
 }

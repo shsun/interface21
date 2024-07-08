@@ -21,6 +21,10 @@ public class WebApplicationContextTestSuite extends AbstractApplicationContextTe
 	
 	private WebApplicationContext root;
 
+	/**
+	 *
+	 * @throws Exception
+	 */
 	public WebApplicationContextTestSuite() throws Exception {
 	}
 

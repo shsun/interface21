@@ -62,7 +62,7 @@
 
 		<mkdir dir="${build.dir}"/>
 
-		<javac destdir="${build.dir}" target="1.3" debug="${debug}"
+		<javac destdir="${build.dir}" target="11" debug="${debug}"
 			deprecation="false" optimize="false" failonerror="true">
 			<src path="${src.dir}"/>
 			<classpath refid="master-classpath"/>
@@ -217,7 +217,7 @@
 
 		<mkdir dir="${testbuild.dir}"/>
 
-		<javac destdir="${testbuild.dir}" target="1.3" debug="${debug}"
+		<javac destdir="${testbuild.dir}" target="11" debug="${debug}"
 			deprecation="false" optimize="false" failonerror="false">
 			<src path="${test.dir}"/>
 			<classpath refid="master-classpath"/>

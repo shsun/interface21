@@ -20,7 +20,17 @@ import com.mockobjects.util.NotImplementedException;
  */
 public class ReadOnlyResultSetTestSuite extends TestCase {
   
-  private class MyMockResultSetMetadata extends CommonMockResultSetMetaData {};
+  private class MyMockResultSetMetadata extends CommonMockResultSetMetaData {
+    @Override
+    public <T> T unwrap(Class<T> iface) throws SQLException {
+      return null;
+    }
+
+    @Override
+    public boolean isWrapperFor(Class<?> iface) throws SQLException {
+      return false;
+    }
+  };
   private class MyMockStatement extends MockStatement {};
   
   private MockSingleRowResultSet rs;

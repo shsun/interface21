@@ -184,6 +184,11 @@ public class JdbcTemplateTestSuite extends TestCase {
 			public String[] getStrings() {
 				return (String[]) l.toArray(new String[l.size()]);
 			}
+
+			@Override
+			public void processRow(ReadOnlyResultSet rs) throws SQLException {
+
+			}
 		}
 		StringHandler sh = new StringHandler();
 		
@@ -231,6 +236,11 @@ public class JdbcTemplateTestSuite extends TestCase {
 
 			public String[] getStrings() {
 				return (String[]) l.toArray(new String[l.size()]);
+			}
+
+			@Override
+			public void processRow(ReadOnlyResultSet rs) throws SQLException {
+
 			}
 		}
 		StringHandler sh = new StringHandler();
@@ -413,6 +423,11 @@ public class JdbcTemplateTestSuite extends TestCase {
 		JdbcTemplate template = new JdbcTemplate(ds);
 		try {
 			template.query(sql, new RowCallbackHandler() {
+				@Override
+				public void processRow(ReadOnlyResultSet rs) throws SQLException {
+					throw rex;
+				}
+
 				public void processRow(java.sql.ResultSet rs) throws java.sql.SQLException {
 					throw rex;
 				}
@@ -908,6 +923,11 @@ public class JdbcTemplateTestSuite extends TestCase {
 		t.setIgnoreWarnings(false);
 		try {
 			t.query(sql, new RowCallbackHandler() {
+				@Override
+				public void processRow(ReadOnlyResultSet rs) throws SQLException {
+					rs.getByte(1);
+				}
+
 				public void processRow(java.sql.ResultSet rs) throws java.sql.SQLException {
 					rs.getByte(1);
 				}
@@ -942,6 +962,11 @@ public class JdbcTemplateTestSuite extends TestCase {
 		
 		t.setIgnoreWarnings(true);
 		t.query(sql, new RowCallbackHandler() {
+			@Override
+			public void processRow(ReadOnlyResultSet rs) throws SQLException {
+				rs.getByte(1);
+			}
+
 			public void processRow(java.sql.ResultSet rs) throws java.sql.SQLException {
 				rs.getByte(1);
 			}
@@ -983,6 +1008,11 @@ public class JdbcTemplateTestSuite extends TestCase {
 		JdbcTemplate template = new JdbcTemplate(ds);
 		try {
 			template.query(sql, new RowCallbackHandler() {
+				@Override
+				public void processRow(ReadOnlyResultSet rs) throws SQLException {
+					throw sex;
+				}
+
 				public void processRow(java.sql.ResultSet rs) throws SQLException {
 					throw sex;
 				}

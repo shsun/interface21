@@ -369,7 +369,6 @@ public class SpringMockCallableStatement
 	}
 
 	/**
-	 * @see java.sql.CallableStatement#setBytes(java.lang.String, byte)
 	 */
 	public void setBytes(String parameterName, byte[] x) throws SQLException {
 		notImplemented();
@@ -674,6 +673,176 @@ public class SpringMockCallableStatement
 		return null;
 	}
 
+	@Override
+	public RowId getRowId(int parameterIndex) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public RowId getRowId(String parameterName) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public void setRowId(String parameterName, RowId x) throws SQLException {
+
+	}
+
+	@Override
+	public void setNString(String parameterName, String value) throws SQLException {
+
+	}
+
+	@Override
+	public void setNCharacterStream(String parameterName, Reader value, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setNClob(String parameterName, NClob value) throws SQLException {
+
+	}
+
+	@Override
+	public void setClob(String parameterName, Reader reader, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setBlob(String parameterName, InputStream inputStream, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setNClob(String parameterName, Reader reader, long length) throws SQLException {
+
+	}
+
+	@Override
+	public NClob getNClob(int parameterIndex) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public NClob getNClob(String parameterName) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public void setSQLXML(String parameterName, SQLXML xmlObject) throws SQLException {
+
+	}
+
+	@Override
+	public SQLXML getSQLXML(int parameterIndex) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public SQLXML getSQLXML(String parameterName) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public String getNString(int parameterIndex) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public String getNString(String parameterName) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public Reader getNCharacterStream(int parameterIndex) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public Reader getNCharacterStream(String parameterName) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public Reader getCharacterStream(int parameterIndex) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public Reader getCharacterStream(String parameterName) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public void setBlob(String parameterName, Blob x) throws SQLException {
+
+	}
+
+	@Override
+	public void setClob(String parameterName, Clob x) throws SQLException {
+
+	}
+
+	@Override
+	public void setAsciiStream(String parameterName, InputStream x, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setBinaryStream(String parameterName, InputStream x, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setCharacterStream(String parameterName, Reader reader, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setAsciiStream(String parameterName, InputStream x) throws SQLException {
+
+	}
+
+	@Override
+	public void setBinaryStream(String parameterName, InputStream x) throws SQLException {
+
+	}
+
+	@Override
+	public void setCharacterStream(String parameterName, Reader reader) throws SQLException {
+
+	}
+
+	@Override
+	public void setNCharacterStream(String parameterName, Reader value) throws SQLException {
+
+	}
+
+	@Override
+	public void setClob(String parameterName, Reader reader) throws SQLException {
+
+	}
+
+	@Override
+	public void setBlob(String parameterName, InputStream inputStream) throws SQLException {
+
+	}
+
+	@Override
+	public void setNClob(String parameterName, Reader reader) throws SQLException {
+
+	}
+
+	@Override
+	public <T> T getObject(int parameterIndex, Class<T> type) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public <T> T getObject(String parameterName, Class<T> type) throws SQLException {
+		return null;
+	}
+
 	/**
 	 * @see java.sql.PreparedStatement#setURL(int, java.net.URL)
 	 */
@@ -687,6 +856,96 @@ public class SpringMockCallableStatement
 	public ParameterMetaData getParameterMetaData() throws SQLException {
 		notImplemented();
 		return null;
+	}
+
+	@Override
+	public void setRowId(int parameterIndex, RowId x) throws SQLException {
+
+	}
+
+	@Override
+	public void setNString(int parameterIndex, String value) throws SQLException {
+
+	}
+
+	@Override
+	public void setNCharacterStream(int parameterIndex, Reader value, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setNClob(int parameterIndex, NClob value) throws SQLException {
+
+	}
+
+	@Override
+	public void setClob(int parameterIndex, Reader reader, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setBlob(int parameterIndex, InputStream inputStream, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setNClob(int parameterIndex, Reader reader, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setSQLXML(int parameterIndex, SQLXML xmlObject) throws SQLException {
+
+	}
+
+	@Override
+	public void setAsciiStream(int parameterIndex, InputStream x, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setBinaryStream(int parameterIndex, InputStream x, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setCharacterStream(int parameterIndex, Reader reader, long length) throws SQLException {
+
+	}
+
+	@Override
+	public void setAsciiStream(int parameterIndex, InputStream x) throws SQLException {
+
+	}
+
+	@Override
+	public void setBinaryStream(int parameterIndex, InputStream x) throws SQLException {
+
+	}
+
+	@Override
+	public void setCharacterStream(int parameterIndex, Reader reader) throws SQLException {
+
+	}
+
+	@Override
+	public void setNCharacterStream(int parameterIndex, Reader value) throws SQLException {
+
+	}
+
+	@Override
+	public void setClob(int parameterIndex, Reader reader) throws SQLException {
+
+	}
+
+	@Override
+	public void setBlob(int parameterIndex, InputStream inputStream) throws SQLException {
+
+	}
+
+	@Override
+	public void setNClob(int parameterIndex, Reader reader) throws SQLException {
+
 	}
 
 	/**
@@ -724,7 +983,7 @@ public class SpringMockCallableStatement
 	}
 
 	/**
-	 * @see java.sql.Statement#executeUpdate(java.lang.String, java.lang.String)
+	 * @see java.sql.Statement#executeUpdate(java.lang.String, java.lang.String[])
 	 */
 	public int executeUpdate(String sql, String[] columnNames)
 		throws SQLException {
@@ -751,7 +1010,7 @@ public class SpringMockCallableStatement
 	}
 
 	/**
-	 * @see java.sql.Statement#execute(java.lang.String, java.lang.String)
+	 * @see java.sql.Statement#execute(java.lang.String, java.lang.String[])
 	 */
 	public boolean execute(String sql, String[] columnNames)
 		throws SQLException {
@@ -767,4 +1026,38 @@ public class SpringMockCallableStatement
 		return 0;
 	}
 
+	@Override
+	public boolean isClosed() throws SQLException {
+		return false;
+	}
+
+	@Override
+	public void setPoolable(boolean poolable) throws SQLException {
+
+	}
+
+	@Override
+	public boolean isPoolable() throws SQLException {
+		return false;
+	}
+
+	@Override
+	public void closeOnCompletion() throws SQLException {
+
+	}
+
+	@Override
+	public boolean isCloseOnCompletion() throws SQLException {
+		return false;
+	}
+
+	@Override
+	public <T> T unwrap(Class<T> iface) throws SQLException {
+		return null;
+	}
+
+	@Override
+	public boolean isWrapperFor(Class<?> iface) throws SQLException {
+		return false;
+	}
 }
